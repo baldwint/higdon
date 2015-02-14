@@ -13,7 +13,7 @@ import icalendar
 import requests
 import bs4
 
-__version__ = '0.1dev'
+__version__ = '0.1.0'
 
 DAY = timedelta(1)
 
