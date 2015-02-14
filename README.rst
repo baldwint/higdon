@@ -14,7 +14,7 @@ the `Novice 2`_ plan:
 .. code-block:: console
 
     $ NOVICE2=http://www.halhigdon.com/training/51138/Marathon-Novice-2-Training-Program
-    $ /higdon.py $NOVICE2 "May 10, 2015"
+    $ higdon $NOVICE2 "May 10, 2015"
 
 This generates a file, ``Marathon-Novice-2.2015-05-10.ics``,
 for loading into your favorite calendar app.
@@ -26,6 +26,12 @@ Installation
 ------------
 
 Using pip_:
+
+.. code-block:: console
+
+    $ pip3 install higdon
+
+Development version:
 
 .. code-block:: console
 
