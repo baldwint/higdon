@@ -13,6 +13,8 @@ import icalendar
 import requests
 import bs4
 
+__version__ = '0.1dev'
+
 DAY = timedelta(1)
 
 def get_higdon_plan(url):
@@ -91,7 +93,7 @@ def main(url, date_string):
     with open(fn, 'wb') as f:
         f.write(cal.to_ical())
 
-if __name__ == "__main__":
+def cli():
     import argparse
 
     parser = argparse.ArgumentParser(description=__doc__)
@@ -102,3 +104,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args.url, args.race_day)
+
+if __name__ == "__main__":
+    cli()
