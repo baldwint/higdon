@@ -24,7 +24,7 @@ def get_higdon_plan(url):
 
     """
     resp = requests.get(url)
-    soup = bs4.BeautifulSoup(resp.text)
+    soup = bs4.BeautifulSoup(resp.text, features="html.parser")
 
     def gen_week(row):
         for cell in row.findAll('td')[1:]:
