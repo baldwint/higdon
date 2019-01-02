@@ -73,8 +73,7 @@ def construct_output_filename(url, date):
     A good filename should contain the plan name and the target date.
 
     """
-    slug = urlparse(url).path.split('/')[-1]
-    plan_name = slug.replace('-Training-Program', '')
+    plan_name = urlparse(url).path.split('/')[-2]
     return '%s.%s.ics' % (plan_name, date)
 
 

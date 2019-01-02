@@ -13,13 +13,13 @@ the `Novice 2`_ plan:
 
 .. code-block:: console
 
-    $ NOVICE2=http://www.halhigdon.com/training/51138/Marathon-Novice-2-Training-Program
+    $ NOVICE2=https://www.halhigdon.com/training-programs/marathon-training/novice-2-marathon/
     $ higdon $NOVICE2 "May 10, 2015"
 
-This generates a file, ``Marathon-Novice-2.2015-05-10.ics``,
+This generates a file, ``novice-2-marathon.2015-05-10.ics``,
 for loading into your favorite calendar app.
 
-.. _Novice 2: http://www.halhigdon.com/training/51138/Marathon-Novice-2-Training-Program
+.. _Novice 2: https://www.halhigdon.com/training-programs/marathon-training/novice-2-marathon/
 .. _Eugene Marathon: http://eugenemarathon.com
 
 Installation
