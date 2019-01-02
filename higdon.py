@@ -34,7 +34,7 @@ def get_higdon_plan(url):
         for row in table.findAll('tr')[1:]:
             yield from gen_week(row)
 
-    table = soup.find('table', attrs={'class': 'table-training'})
+    table = soup.find('table', attrs={'class': 'tablesaw'})
     return tuple(gen_all(table))
 
 
