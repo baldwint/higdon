@@ -24,7 +24,7 @@ def get_higdon_plan(url):
 
     """
     resp = requests.get(url)
-    soup = bs4.BeautifulSoup(resp.text)
+    soup = bs4.BeautifulSoup(resp.text, features="html.parser")
 
     def gen_week(row):
         for cell in row.findAll('td')[1:]:
@@ -34,7 +34,7 @@ def get_higdon_plan(url):
         for row in table.findAll('tr')[1:]:
             yield from gen_week(row)
 
-    table = soup.find('table', attrs={'class': 'table-training'})
+    table = soup.find('table', attrs={'class': 'tablesaw'})
     return tuple(gen_all(table))
 
 
@@ -73,8 +73,7 @@ def construct_output_filename(url, date):
     A good filename should contain the plan name and the target date.
 
     """
-    slug = urlparse(url).path.split('/')[-1]
-    plan_name = slug.replace('-Training-Program', '')
+    plan_name = urlparse(url).path.split('/')[-2]
     return '%s.%s.ics' % (plan_name, date)
 
 
